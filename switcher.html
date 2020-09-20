@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data collection</title>
+</head>
+
+<body >
+
+<button type="button" class="btn btn-outline-danger switcher">dark mode on</button>
+<br>
+
+
+
+<h1 >My Data </h1>
+
+<div class="content">
+
+    <form id="add-data-form">
+<input type="text" name="clicksNumber" placeholder="Number of clicks" onclick="disable()">
+<input type="text" name="mode" placeholder="mode type" onclick="disable()">
+<input type="text" name="date" placeholder="date" onclick="disable()">
+
+<button type="button" class="btn btn-outline-danger add"> Add Data </button>
+
+
+    </form>
+
+    <ul id="data-list"></ul>
+
+</div>
+
+
+
+
+
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDlenrWG-PCZL4RpexQ4sdNqgAT3N9__h8",
+    authDomain: "switcher-40a1f.firebaseapp.com",
+    databaseURL: "https://switcher-40a1f.firebaseio.com",
+    projectId: "switcher-40a1f",
+    storageBucket: "switcher-40a1f.appspot.com",
+    messagingSenderId: "165212167861",
+    appId: "1:165212167861:web:e23cf84b16fb37555b28fc"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db= firebase.firestore();
+</script>
+<script src="app.js"></script>
+
+</body>
+</html>
